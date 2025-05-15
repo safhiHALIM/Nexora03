@@ -1,0 +1,181 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Contenu centré */
+}
+
+h1, h2, h3 {
+  color: #4a148c;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+button {
+  background-color: #6a1b9a;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8e24aa;
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Définition de l'animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style spécifique pour l'image de la section Featured Image */
+#featured-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Sur petits écrans : max-width de 400px */
+@media (min-width: 640px) {
+  #featured-image img {
+    max-width: 400px;
+  }
+}
+
+/* Sur écrans moyens : max-width de 600px */
+@media (min-width: 768px) {
+  #featured-image img {
+    max-width: 600px;
+  }
+}
+
+/* Sur grands écrans : max-width de 800px */
+@media (min-width: 1024px) {
+  #featured-image img {
+    max-width: 800px;
+  }
+}
+
+/* Optionnel : ajustement pour les petits écrans */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 1.5em; /* Ajustez la taille si nécessaire */
+    }
+}
+
+/* Modern border pour le paragraphe dans la section About (Welcome to Nexora) */
+#about p {
+  border: 2px solid #ccc;       /* Bordure grise */
+  padding: 1rem;                /* Espacement intérieur */
+  border-radius: 10px;          /* Coins arrondis */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  transition: all 0.3s ease;    /* Animation smooth au hover */
+}
+
+#about p:hover {
+  border-color: #4a148c;        /* Changement de couleur de la bordure */
+  transform: scale(1.02);       /* Légère augmentation de la taille */
+}
+
+/* Section Réseaux Sociaux */
+.social-section {
+  background: linear-gradient(to right, #e0e7ff, #ffffff, #ffe4e6); /* gradient harmonisé */
+  padding: 1.5rem; /* équivalent à py-6 px-4 */
+  border-radius: 0.5rem; /* arrondi */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 90%;
+}
+
+.social-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a i {
+  font-size: 2.5rem; /* agrandi par rapport au text-4xl */
+  transition: transform 0.3s ease;
+}
+
+/* Effet hover pour agrandir l'icône */
+.social-icons a:hover i {
+  transform: scale(1.1);
+}
+
+/* Styles pour le modal */
+#modal {
+  z-index: 1000;
+}
+
+#modal > div {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
