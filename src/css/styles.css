@@ -121,6 +121,54 @@ footer {
   transform: scale(1.02);       /* Légère augmentation de la taille */
 }
 
+/* Modern border pour les cards (similaire à la section About) */
+.card {
+  border: 2px solid #ccc;       /* Même couleur que le paragraphe */
+  padding: 1rem;                /* Espacement intérieur */
+  border-radius: 10px;          /* Coins arrondis */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  transition: all 0.3s ease;    /* Animation smooth au hover */
+}
+
+.card:hover {
+  border-color: #4a148c;        /* Changement de couleur au survol */
+  transform: scale(1.02);       /* Légère augmentation de la taille */
+}
+
+/* Par défaut, l'image occupe 100% de la largeur du conteneur */
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Pour les écrans très petits, pas de modification */
+@media (max-width: 640px) {
+  .card img {
+    max-width: 100%;
+  }
+}
+
+/* Sur petits écrans (641px à 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .card img {
+    max-width: 95%;
+  }
+}
+
+/* Sur écrans moyens (769px à 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card img {
+    max-width: 90%;
+  }
+}
+
+/* Sur grands écrans, on laisse l'image occuper 100% */
+@media (min-width: 1025px) {
+  .card img {
+    max-width: 100%;
+  }
+}
+
 /* Section Réseaux Sociaux */
 .social-section {
   background: linear-gradient(to right, #e0e7ff, #ffffff, #ffe4e6); /* gradient harmonisé */
